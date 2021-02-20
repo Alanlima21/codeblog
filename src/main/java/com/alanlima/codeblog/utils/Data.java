@@ -3,8 +3,6 @@ package com.alanlima.codeblog.utils;
 import java.time.LocalDate;
 import java.util.Arrays;
 
-import javax.annotation.PostConstruct;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -17,7 +15,7 @@ public class Data {
 	@Autowired
 	private PostRepository repo;
 	
-	@PostConstruct   //Vai ser executado quando a aplicação subir
+	//@PostConstruct   //Vai ser executado quando a aplicação subir
 	public void savePosts() {
 		
 		Post p1 = new Post(null, "Teste", "Alan Lima", LocalDate.now(), "Olá, post teste");
