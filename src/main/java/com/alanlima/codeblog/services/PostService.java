@@ -25,4 +25,5 @@ public class PostService {
 	public Post insert(Post obj) {
 		return repo.save(obj);
 	}
+	
 }
