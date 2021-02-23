@@ -1,5 +1,6 @@
 package com.alanlima.codeblog.services;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,8 @@ public class PostService {
 	}
 	
 	public Post insert(Post obj) {
-		return repo.save(obj);
+		Post post = new Post(null, obj.getTitulo(), obj.getAutor(), LocalDate.now(), obj.getTexto());
+		return repo.save(post);
 	}
 	
 }
