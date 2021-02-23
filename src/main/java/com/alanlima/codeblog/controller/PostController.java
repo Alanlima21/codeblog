@@ -48,6 +48,7 @@ public class PostController {
 	public ModelAndView insert(@Valid Post obj, BindingResult result, RedirectAttributes atributes) {
 		if(result.hasErrors()) {
 			ModelAndView mv = new ModelAndView("redirect:/newpost");
+			atributes.addFlashAttribute("mensagem", "Verifique se os campos obrigatórios foram preenchidos !");
 			return mv;
 		}
 		ModelAndView mv = new ModelAndView("redirect:posts");
